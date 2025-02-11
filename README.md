@@ -1,26 +1,21 @@
 # _KV Store for ESP32_
 
 ## Overview
-This project is an ESP32-based data logger that reads temperature (and optionally humidity) measurements from a DHT11 sensor at regular intervals. It stores the measurements in a buffer and non-volatile storage (NVS). The ESP32 runs an HTTP server that allows users to query measurements by timestamp via a web interface or HTTP requests. The device connects to a Wi-Fi network, synchronizes time using SNTP, and uses mDNS for easy access over the network.
+This project is a lightweight key-value store optimized for time-series data storage on ESP32 devices. It provides multi-level data storage (buffering, caching, and persistent storage) and enables seamless integration with an edge device for efficient data management.
 
 
 
 ## Features
-•	DHT11 Sensor Integration: Reads temperature data every minute.
+•	Multi-Level Data Storage: Implements buffering, caching, and flash storage for efficient data handling.
 
-•	Data Buffering: Stores measurements in a buffer and writes to NVS when the buffer is 90% full.
+•	Optimized for ESP32: Designed to work within the limited resources of an ESP32 device.
 
-•	HTTP Server: Provides an API and web interface to query measurements by timestamp.
+•	Edge Device Integration: Smoothly pushes data to an edge device for further processing.
 
-•	Web Interface: User-friendly web page to input timestamps and display results.
+•	Device-First Query Interface: Supports range-based queries directly from the ESP32.
 
-•	Wi-Fi Connectivity: Connects to a specified Wi-Fi network.
+•	Time-Series Focused: Ideal for applications requiring chronological data storage.
 
-•	SNTP Time Synchronization: Synchronizes time using NTP servers.
-
-•	mDNS Support: Access the device using a hostname instead of an IP address.
-
-•	Configuration Management: Uses menuconfig for storing sensitive data and configurations.
 
 ## Hardware Requirements
 •	ESP32 Development Board
